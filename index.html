@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FairScreen - Never Pay Guilt Tips Again</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        tea: {
+                            50: '#f5e9da',   // Light Foam Cream
+                            100: '#e8d4be',  // Coffee & Milk Tea Warm Blend
+                            200: '#d7bea1',  // Warm Boba Latte
+                            300: '#c1a280',  // Cinnamon Tan
+                            400: '#a8845e',  // Medium Roast Milk Tea
+                            500: '#88623b',  // Brown Sugar Syrup
+                            600: '#694625',  // Deep Espresso Brew
+                            700: '#4e3015',  // Roasted Bean
+                            800: '#341d0a',  // Dark Tapioca
+                            900: '#1f0f04',  // Deep Coffee-Boba Black
+                            950: '#120702',  // Extra Dark Tapioca
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="bg-tea-100 text-tea-900 antialiased selection:bg-tea-300 selection:text-tea-950">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="border-b border-tea-300/70 bg-tea-100/90 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+                <!-- Boba icon badge -->
+                <div class="w-9 h-9 rounded-xl bg-tea-900 flex items-center justify-center text-tea-100 font-black text-lg shadow-md shadow-tea-900/10">
+                    <i class="fa-solid fa-mug-hot text-sm"></i>
+                </div>
+                <span class="font-black text-xl tracking-tight text-tea-950">FairScreen</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-16 space-y-20 sm:space-y-28">
+
+        <!-- SECTION 1: BIG HEADLINE & HOW IT WORKS -->
+        <section class="text-center max-w-3xl mx-auto space-y-6 pt-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-tea-300 bg-tea-200/70 text-xs font-bold text-tea-800 shadow-sm">
+                <i class="fa-solid fa-circle-check text-tea-600"></i>
+                <span>Stop Tipping Out Of Pressure</span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-tea-950 tracking-tight leading-tight sm:leading-tight">
+                An app that checks service reviews before you order so you never pay guilt tips
+            </h1>
+
+            <p class="text-base sm:text-xl text-tea-700 font-medium max-w-2xl mx-auto leading-relaxed">
+                FairScreen checks real service ratings before you tap pay, telling you instantly if a tip is deserved and what amount is actually fair.
+            </p>
+
+            <!-- Button 1 of 2: Main Call To Action (Darker than background) -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#signup" class="w-full sm:w-auto text-lg font-extrabold bg-tea-900 hover:bg-tea-950 text-tea-50 px-8 py-4 rounded-2xl transition shadow-xl shadow-tea-900/20 flex items-center justify-center gap-2.5 border border-tea-950">
+                    <span>Find Your Fair Tip</span>
+                    <i class="fa-solid fa-arrow-down text-sm text-tea-300"></i>
+                </a>
+            </div>
+
+            <!-- Visual Preview Card in Boba Theme -->
+            <div class="pt-8 max-w-md mx-auto">
+                <div class="bg-white border border-tea-200 rounded-2xl p-5 shadow-xl shadow-tea-900/5 text-left space-y-4">
+                    <div class="flex justify-between items-center border-b border-tea-100 pb-3">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-mug-hot text-tea-600 text-base"></i>
+                            <span class="font-bold text-sm text-tea-950">Boba & Tea House</span>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-tea-100 text-tea-800 border border-tea-200">Self-Service Counter</span>
+                    </div>
+
+                    <div class="bg-tea-50 rounded-xl p-4 border border-tea-200 space-y-2">
+                        <div class="flex items-center justify-between text-xs font-semibold">
+                            <span class="text-tea-700">FairScreen AI Verdict:</span>
+                            <span class="text-emerald-700 font-black">$0.00 Tip Deserved</span>
+                        </div>
+                        <p class="text-xs text-tea-800 leading-normal">
+                            "Counter pickup only. Order placed via touchscreen. Standard recommendation is $0.00 or loose change."
+                        </p>
+                    </div>
+
+                    <div class="flex justify-between text-xs text-tea-600 font-medium px-1">
+                        <span>Expected iPad screen: 25%</span>
+                        <span class="text-tea-900 font-extrabold">Saved: $2.25</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 2: THE PROBLEM IN YOUR CUSTOMER'S OWN WORDS -->
+        <section class="border-t border-tea-200 pt-16">
+            <div class="max-w-3xl mx-auto space-y-8">
+                
+                <div class="text-center space-y-3">
+                    <span class="text-xs font-black tracking-wider text-tea-600 uppercase">The Problem</span>
+                    <h2 class="text-2xl sm:text-4xl font-black text-tea-950">
+                        "I don't think I can say no to the screen without looking like a bad person."
+                    </h2>
+                </div>
+
+                <div class="bg-white border border-tea-200 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+                    <p class="text-base sm:text-lg text-tea-800 leading-relaxed">
+                        You grab a $6 boba milk tea. The worker turns the iPad around. The screen shows three huge buttons: <strong class="text-tea-950">20%, 25%, and 30%</strong>. The barista is standing right there watching your fingers.
+                    </p>
+                    
+                    <p class="text-base sm:text-lg text-tea-800 leading-relaxed">
+                        You panic-tap 20% just to avoid eye contact.
+                    </p>
+
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-2xl text-amber-950 text-sm sm:text-base font-medium flex items-start gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-700 text-lg mt-0.5 shrink-0"></i>
+                        <div>
+                            <strong class="text-amber-950 block font-bold mb-0.5">What it is costing you right now:</strong>
+                            That single moment of pressure costs you $1.50 to $4.00 every single day. Over a year, reflexively tapping "20%" on counter service and bad orders wastes over <strong class="text-tea-950">$450 in pure guilt tips</strong>.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: WHAT THEY GET AND WHAT IT COSTS -->
+        <section class="border-t border-tea-300/70 pt-16 space-y-12">
+            
+            <div class="text-center space-y-3 max-w-2xl mx-auto">
+                <span class="text-xs font-black tracking-wider text-tea-600 uppercase">How It Works</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-tea-950">
+                    4 steps to total confidence at checkout
+                </h2>
+            </div>
+
+            <!-- 4 Step Process -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                
+                <div class="bg-white border border-tea-200 p-6 rounded-2xl space-y-3 shadow-sm">
+                    <div class="w-9 h-9 rounded-xl bg-tea-900 text-tea-50 font-black flex items-center justify-center text-sm">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-tea-950">Open FairScreen</h3>
+                    <p class="text-sm text-tea-700 leading-relaxed">
+                        Pull up the app while standing in line, sitting down, or placing a delivery order.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-tea-200 p-6 rounded-2xl space-y-3 shadow-sm">
+                    <div class="w-9 h-9 rounded-xl bg-tea-900 text-tea-50 font-black flex items-center justify-center text-sm">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-tea-950">Search the venue</h3>
+                    <p class="text-sm text-tea-700 leading-relaxed">
+                        FairScreen checks real service reviews, venue type, and actual staff effort scores in seconds.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-tea-200 p-6 rounded-2xl space-y-3 shadow-sm">
+                    <div class="w-9 h-9 rounded-xl bg-tea-900 text-tea-50 font-black flex items-center justify-center text-sm">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-tea-950">Get your fair recommendation</h3>
+                    <p class="text-sm text-tea-700 leading-relaxed">
+                        Get an honest answer: $0 for self-serve, standard % for good service, or extra for great service.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-tea-200 p-6 rounded-2xl space-y-3 shadow-sm">
+                    <div class="w-9 h-9 rounded-xl bg-tea-900 text-tea-50 font-black flex items-center justify-center text-sm">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-tea-950">Tap without hesitation</h3>
+                    <p class="text-sm text-tea-700 leading-relaxed">
+                        You hit "Custom" or "No Tip" with complete peace of mind, knowing your decision is backed by facts.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Plain Price & Guarantee Box in Coffee-Tea Blend Styling -->
+            <div class="max-w-xl mx-auto bg-gradient-to-b from-tea-200 to-tea-300/70 border border-tea-300 rounded-3xl p-8 text-center space-y-6 shadow-md relative overflow-hidden">
+                <div class="absolute -top-12 -right-12 w-32 h-32 bg-tea-300/50 rounded-full blur-2xl"></div>
+
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-tea-900 text-tea-50">
+                    Simple Plain Pricing
+                </span>
+
+                <div>
+                    <div class="flex items-baseline justify-center gap-1">
+                        <span class="text-5xl font-black text-tea-950">$3.99</span>
+                        <span class="text-tea-800 font-bold">/ month</span>
+                    </div>
+                    <p class="text-xs text-tea-800 mt-2 font-medium">No setup fees. No hidden costs. Cancel anytime in one click.</p>
+                </div>
+
+                <div class="border-t border-tea-400/60 pt-6 text-left space-y-3">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-shield-halved text-tea-800 text-lg mt-0.5"></i>
+                        <p class="text-xs sm:text-sm text-tea-900">
+                            <strong class="text-tea-950 font-bold">100% Money-Back Guarantee:</strong> Try FairScreen for 30 days. If it doesn't save you at least 5x its price in guilt tips, cancel instantly and receive a full refund.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 4: PROOF -->
+        <section class="border-t border-tea-200 pt-16">
+            <div class="max-w-3xl mx-auto space-y-8 text-center">
+                
+                <span class="text-xs font-black tracking-wider text-tea-600 uppercase">Real Data</span>
+                
+                <div class="bg-white border border-tea-200 rounded-3xl p-8 space-y-6 shadow-sm">
+                    <div class="text-5xl sm:text-7xl font-black text-tea-950 tracking-tight">
+                        77% <span class="text-tea-600 text-3xl sm:text-5xl font-bold">to</span> 78%
+                    </div>
+
+                    <p class="text-lg sm:text-2xl font-bold text-tea-800 max-w-xl mx-auto leading-snug">
+                        of consumers say tipping in the U.S. has officially become "ridiculous."
+                    </p>
+
+                    <div class="border-t border-tea-200 pt-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-tea-600">
+                        <span>Source: National Consumer Tipping Benchmarks & Industry Surveys</span>
+                        <span class="text-tea-900 font-bold">You are not alone in feeling pressured.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 5: THE 2 REAL REASONS SOMEONE WOULD NOT DO THIS (OBJECTIONS) -->
+        <section class="border-t border-tea-200 pt-16">
+            <div class="max-w-3xl mx-auto space-y-8">
+                
+                <div class="text-center space-y-3">
+                    <span class="text-xs font-black tracking-wider text-tea-600 uppercase">Honest Answers</span>
+                    <h2 class="text-2xl sm:text-4xl font-black text-tea-950">
+                        Two reasons you might hesitate
+                    </h2>
+                </div>
+
+                <div class="space-y-6">
+                    
+                    <!-- Objection 1 -->
+                    <div class="bg-white border border-tea-200 rounded-2xl p-6 space-y-3 shadow-sm">
+                        <h3 class="text-lg font-bold text-tea-950 flex items-center gap-2">
+                            <span class="text-tea-600">1.</span> "Is paying $3.99 a month actually worth it?"
+                        </h3>
+                        <p class="text-sm sm:text-base text-tea-800 leading-relaxed">
+                            If you tip 20% on two $5 boba teas or coffees a week just to avoid feeling awkward, you lose $8.00 every month. FairScreen pays for itself on your first two tea runs or takeout orders. Everything after that is money back in your pocket.
+                        </p>
+                    </div>
+
+                    <!-- Objection 2 -->
+                    <div class="bg-white border border-tea-200 rounded-2xl p-6 space-y-3 shadow-sm">
+                        <h3 class="text-lg font-bold text-tea-950 flex items-center gap-2">
+                            <span class="text-tea-600">2.</span> "Will this actually work for my local spots?"
+                        </h3>
+                        <p class="text-sm sm:text-base text-tea-800 leading-relaxed">
+                            Yes. FairScreen cross-references service reviews, venue categories, and tipping standards for boba shops, coffee stands, food trucks, delivery apps, rideshares, and full-service restaurants across North America.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 6: SIGN-UP SECTION AT THE BOTTOM WITH GOOGLE FORM EMBED -->
+        <section id="signup" class="border-t border-tea-300/70 pt-16 pb-12">
+            <div class="max-w-3xl mx-auto bg-tea-200/90 border border-tea-300 rounded-3xl p-6 sm:p-10 text-center space-y-8 shadow-xl">
+                
+                <div class="space-y-3">
+                    <h2 class="text-3xl sm:text-5xl font-black text-tea-950 tracking-tight">
+                        Never pay another guilt tip.
+                    </h2>
+                    <p class="text-base sm:text-lg text-tea-800 font-medium">
+                        Ready to take back control of your spending? Get in touch with us below.
+                    </p>
+                </div>
+
+                <!-- Button 2 of 2: Get in touch button (Dark boba color, scrolling to form) -->
+                <div class="pt-2">
+                    <a id="main-signup-btn" href="#embed-form" class="inline-flex items-center justify-center w-full sm:w-auto text-lg font-extrabold bg-tea-900 hover:bg-tea-950 text-tea-50 px-10 py-5 rounded-2xl transition-all duration-200 transform hover:scale-[1.01] shadow-xl shadow-tea-900/20 gap-3 border border-tea-950">
+                        <span>Get in touch</span>
+                        <i class="fa-solid fa-arrow-down text-sm text-tea-300"></i>
+                    </a>
+                </div>
+
+                <!-- Google Forms Embedded Iframe -->
+                <div id="embed-form" class="pt-4 w-full overflow-hidden rounded-2xl border border-tea-300 bg-white">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSc2eCfyHyWbK5bo_YXJjjRC77nAed6i9U8h-f1uU8_IYxTF1w/viewform?embedded=true" 
+                        class="w-full min-h-[750px] border-0 rounded-2xl" 
+                        width="100%" 
+                        height="750" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                        Loading…
+                    </iframe>
+                </div>
+
+                <p class="text-xs sm:text-sm text-tea-700 font-semibold">
+                    We read every submission and reply within 24 hours.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-tea-300/70 bg-tea-200/60 py-8 text-center text-xs text-tea-700 font-medium">
+        <p>&copy; 2026 FairScreen. Fair. Honest. Confident.</p>
+    </footer>
+
+    <script>
+        console.log("FairScreen Boba Milk Tea themed landing page loaded successfully.");
+    </script>
+</body>
+</html>
